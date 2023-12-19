@@ -1,0 +1,55 @@
+
+// Para que la barra no tape el main
+.aab-main-paginas {
+    padding: 10px;
+  }
+
+.titulo-pagina{
+    color:white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: solid 2px black;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: $color2;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.aab-parrafos-paginas{
+    color:black;
+    margin:10px;
+    text-align: justify;
+    font-size: 1.1rem;
+    text-indent: 10px;
+ }
+
+.aab-boton-codigo{
+    text-align: center;
+    font-size: 1rem;
+    margin:3px;
+    padding:3px;
+    font-weight:400;
+}
+
+.classImgCod1 {
+    display: none;
+}
+.classImgCod2 {
+    display: none;
+}
+
+.texto-warning{
+    color:red;
+    font-weight: 500;
+}
+
+.texto-resaltado{
+    color:blue;
+    font-weight: 500;
+}
+
+.img-alinear-centro{
+    padding:10px;
+    display: block; /* Asegura que la imagen sea un bloque en su contenedor */
+    margin: 0 auto; 
+}

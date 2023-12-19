@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <link rel="icon" href="img/iconoJS32x32.svg">
+    <!-- BS STYLE-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- AAB STYLE-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- AAB CODIGO JS-->
+    <script defer src="script/codigo1.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="fixed-top aab-div-nav">
+        <img class="aab-img-titulo" src="img/js_titulo.webp" alt="titulo JS" />
+        <!-- ICONO HOME-->
+        <a href="#" class="fixed-top text-end aab-header-a">
+          <img class="aab-home-img" src="img/home_sinFSlowN.gif" alt="home" />
+        </a>
+        <!-- FIN ICONO HOME-->
+      </div>
+    </header>
+
+    <main class="aab-main-index row">
+      <div class="col-6">
+        <h2 class="aab-titulo-col1">
+          Aspectos Teóricos
+          <img
+            class="botonAbrirPDF"
+            onclick="abrirPDF()"
+            width="10%"
+            src="img/librosinFSlowN.gif"
+            alt="mouse"
+          />
+        </h2>
+        <p>Consideraciones Generales</p>
+        <ul>
+          <li><a href="html/pagina1.html#pag1QueEs">¿Qué es JavaScript?</a></li>
+          <li>
+            <a href="html/pagina1.html#pag1SitiosW"
+              >Sitios web y aplicaciones web</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina1.html#pag1CarClav">Características clave</a>
+          </li>
+          <li>
+            <a href="html/pagina1.html#pag1FontBack">Front-end y Back-end</a>
+          </li>
+          <li><a href="html/pagina1.html#pag1ElemBas">Elementos básicos</a></li>
+        </ul>
+
+        <p>Como escribir código JS en una aplicación web</p>
+        <ul>
+          <li>
+            <a href="html/pagina1.html#pag1JsHtml"
+              >Dentro de un documento HTML</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina1.html#pag1JsArchInd"
+              >En un archivo individual (recomendado)</a
+            >
+          </li>
+        </ul>
+        <p>Identificadores y Convenciones de Estilo</p>
+        <ul>
+          <li><a href="html/pagina1.html#pag1Identif">Concepto</a></li>
+          <li>
+            <a href="html/pagina1.html#pag1Identif1">Reglas de Nomenclatura</a>
+          </li>
+          <li>
+            <a href="html/pagina1.html#pag1IdentifBuPrac"
+              >Convenciones de Estilo (buenas prácticas)</a
+            >
+          </li>
+        </ul>
+        <p>Tipos de Datos</p>
+        <ul>
+          <li>
+            <a href="html/pagina1.html#pag1Primitivos">Primitivos</a>
+          </li>
+          <li>
+            <a href="html/pagina1.html#pag1Compuestos">Compuestos (Objetos)</a>
+          </li>
+        </ul>
+
+        <p>Variables</p>
+        <ul>
+          <li>
+            <a href="html/pagina1.html#pag1VarDec"
+              >Declaración - Inicialización - Asignación</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina1.html#pag1VarVar">var</a>
+          </li>
+          <li>
+            <a href="html/pagina1.html#pag1VarLet">let</a>
+          </li>
+          <li>
+            <a href="html/pagina1.html#pag1VarConst">const</a>
+          </li>
+        </ul>
+
+        <p>Strings</p>
+        <ul>
+          <li>
+            <a href="html/pagina2.html#pag2Sting"
+              >Concepto - Creación - Sintáxis</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina2.html#pag2StingCarEsp"
+              >Caracteres especiales</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina2.html#pag2StingConcat">Concatenación</a>
+            <ul>
+              <li>
+                <a href="html/pagina2.html#pag2Stingtemplit"
+                  >Plantillas literales</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="html/pagina2.html#pag2StingPropyMet"
+              >Propiedades y métodos</a
+            >
+            <ul>
+              <li>
+                <a href="html/pagina2.html#pag2StingDifPropyMet"
+                  >Distinción - propiedades y métodos</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>Numbers</p>
+        <ul>
+          <li>
+            <a href="html/pagina2.html#pag2Number">Tipos de números</a>
+          </li>
+          <li>
+            <a href="html/pagina2.html#pag2NumberCreation"
+              >Creación - Sintáxis</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina2.html#pag2NumberOperation">
+              Operaciones con números</a
+            >
+            <ul>
+              <li>
+                <a href="html/pagina2.html#pag2NumberOpOrder"
+                  >Orden de las operaciones</a
+                >
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="html/pagina2.html#pag2NumberOpUn"
+                  >Operadores unarios</a
+                >
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="html/pagina2.html#pag2NumberOpBin"
+                  >Operadores binarios</a
+                >
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="html/pagina2.html#pag2NumberOpTer"
+                  >Operadores ternarios</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="html/pagina2.html#pag2NumberPropMet"
+              >Propiedades y métodos</a
+            >
+            <ul>
+              <li>
+                <a href="html/pagina2.html#pag2NumberParsear"
+                  >"Parsear" strings a numbers</a
+                >
+              </li>
+              <li>
+                <a href="html/pagina2.html#pag2NumberPesoArgentino"
+                  >Dar formato a un nro. como $</a
+                >
+              </li>
+              <li>
+                <a href="html/pagina2.html#pag2StingDifPropyMet"
+                  >Distinción - propiedades y métodos</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="html/pagina2.html#pag2NumberComprob"> Comprobaciones</a>
+          </li>
+          <li>
+            <a href="html/pagina2.html#pag2NumberPreyPro"
+              >Precisión y problemas</a
+            >
+          </li>
+        </ul>
+        <p>Booleanos</p>
+        <ul>
+          <li>
+            <a href="html/pagina2.html#pag2Bool">Conceptos clave</a>
+          </li>
+        </ul>
+        <p>Objetos</p>
+        <ul>
+          <li>
+            <a href="html/pagina4.html#pag4Object"> Aspectos clave</a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object1">Creación - Sintáxis</a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object2"
+              >Propiedades: acceso, modificación, creación, etc.</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object9"
+              >Iterar sobre las propiedades de un objeto.</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object3"
+              >Destructuring (desempaquetamiento) de objetos
+            </a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object4"
+              >Objetos dentro de objetos
+            </a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object5">Prototipos y herencia </a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object6">El objeto this </a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object7"
+              >Congelar objetos para no poder modificarlos
+            </a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Object8"
+              >Métodos aplicables a los objetos
+            </a>
+          </li>
+        </ul>
+        <p>Arrays</p>
+        <ul>
+          <li>
+            <a href="html/pagina4.html#pag4Arrays"> Aspectos clave</a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Arrays1"> Métodos y propiedades</a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Arrays2">
+              Iterar sobre los elementos de un array</a
+            >
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Arrays3">Operador Spread</a>
+          </li>
+          <li>
+            <a href="html/pagina4.html#pag4Arrays4"
+              >El destructuring de arrays</a
+            >
+          </li>
+        </ul>
+        <p>Ventanas Emergentes</p>
+        <ul>
+          <li>
+            <a href="html/pagina2.html#pag2VentEmerg"
+              >alert(), confirm(), y prompt()</a
+            >
+          </li>
+        </ul>
+        <p>Estucturas de control condicional</p>
+        <ul>
+          <li>
+            <a href="html/pagina3.html#pag3Condic">Aspectos clave</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3CondicIf">if...else if...else</a>
+            <ul>
+              <li>
+                <a href="html/pagina3.html#pag3CondicOpRep"
+                  >Operadores lógicos y relacionales</a
+                >
+              </li>
+              <li>
+                <a href="html/pagina3.html#pag3CondicAndOr"
+                  >Operadores AND (&&) y OR (||)</a
+                >
+              </li>
+              <li>
+                <a href="html/pagina3.html#pag3CondicIfsAnid">ifs anidados</a>
+              </li>
+              <li>
+                <a href="html/pagina3.html#pag3CondicOpTer"
+                  >Operador ternario</a
+                >
+              </li>
+              <li>
+                <a href="html/pagina3.html#pag3CondicSwi">Swith</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>Estucturas de control iterativas</p>
+        <ul>
+          <li>
+            <a href="html/pagina3.html#pag3Bucles">Aspectos Clave</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3BucleFor">For Loop o Bucle For</a>
+          </li>
+          <ul>
+            <li>
+              <a href="html/pagina3.html#pag3BucleForByC">Break y continue</a>
+            </li>
+            <li>
+              <a href="html/pagina3.html#pag3BucleItArr">Iterar sobre datos (Arrays, Objects, etc.)</a>
+            </li>
+            <li>
+              <a href="html/pagina3.html#pag3BucleItArrFO">for ... of</a>
+            </li>
+            <li>
+              <a href="html/pagina3.html#pag3BucleItArrFI">for ... in</a>
+            </li>
+          </ul>
+          <li>
+            <a href="html/pagina3.html#pag3BucleWhile"
+              >While Loop o Bucle While</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3BucleDoWhile"
+              >Do While Loop o Bucle Do While</a>
+          </li>
+        </ul>
+        <p>Funciones</p>
+        <ul>
+          <li>
+            <a href="html/pagina3.html#pag3Func">Aspectos clave</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3FuncDec"
+              >Declarar (crear) y ejecutar (llamar) funciones</a>
+          </li>
+          <ul>
+            <li>
+              <a href="html/pagina3.html#pag3FuncDec">Function Declaration </a>
+            </li>
+            <li>
+              <a href="html/pagina3.html#pag3FuncDec">Function Expression </a>
+            </li>
+          </ul>
+          <li>
+            <a href="html/pagina3.html#pag3ParArg">Parámetros y argumentos</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3Return">Return</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3FuncOrdSup"
+              >Funciones de orden superior</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3FuncOrdSup"
+              >Comunicación entre funciones</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3FuncArrow">Arrow functions</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3FuncObject"
+              >Añadir funciones a un objeto (métodos)</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3FuncOpProp"
+              >El operador de propagación (spread operator)</a>
+          </li>
+          <li>
+            <a href="html/pagina3.html#pag3FuncHoist">El hoisting y el scope</a>
+          </li>
+        </ul>
+
+        <p class="aab-tips">Visual Studio Code</p>
+        <ul>
+          <li>
+            <a class="a-tips" href="html/tips.html#PagTips">Seleccionar texto repetido y cambiarlo</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6">
+        <h2 class="aab-titulo-col1">Aspectos Prácticos</h2>
+
+        <p>Ventanas Emergentes</p>
+        <ul>
+          <li>
+            <a href="html/practica.html#practicaPrompt">Funciones: prompt() , confirm() y alert()</a>
+          </li>
+        </ul>
+
+        <p>Obtener CUIL a partir del DNI</p>
+        <ul>
+          <li>
+            <a href="html/practica.html#obtenerCUIL">toString ,Number ,split ,function ,return ,if-else if-else , for
+              ,map ,lenght ,getElementById , querySelector, innerText.</a>
+          </li>
+        </ul>
+
+        <p>Cálculo Sueldo Neto</p>
+        <ul>
+          <li>
+            <a href="html/practica.html#calculoSueldo">tables, switch, value, style.display, NumberFormat ,onchange
+              ,getElementById, innerText.</a>
+          </li>
+        </ul>
+      </div>
+
+      <div><p></p></div>
+      <div><p></p></div>
+    </main>
+
+    <footer>
+      <!-- ICONO UP-->
+      <a href="#" class="fixed-bottom text-end">
+        <img class="aab-footer-img" src="img/subir_sinFSlowN.gif" alt="up" />
+      </a>
+      <!-- FIN ICONO UP-->
+    </footer>
+    <!-- BS JAVASCRIPT-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- FIN BS JAVASCRIPT-->
+  </body>
+</html>

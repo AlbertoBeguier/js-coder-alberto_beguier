@@ -1,0 +1,73 @@
+// Para que la barra no tape el main
+.aab-titulo-col1 {
+  margin-top: 1%;
+  margin-left: 2%;
+  background-color: rgb(245, 245, 173);
+  text-shadow: -0.3px -0.3px 0 orangered, 0.3px -0.3px 0 orangered,
+    -0.3px 0.3px 0 orangered, 0.3px 0.3px 0 orangered;
+}
+
+.botonAbrirPDF{
+  margin-left:5%;
+  cursor: pointer;
+}
+
+.aab-main-index {
+  margin-top: 5%;
+  padding: 10px;
+  background-color: rgb(245, 245, 173);
+}
+
+.aab-main-index p {
+  color: $color2;
+  margin: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: -0.3px -0.3px 0 rgb(53, 52, 52), 0.3px -0.3px 0 rgb(53, 52, 52),
+    -0.3px 0.3px 0 rgb(53, 52, 52), 0.3px 0.3px 0 rgb(53, 52, 52);
+}
+
+.aab-main-index {
+  ul {
+    font-size: 1.2rem;
+    color: rgb(48, 47, 47);
+    font-weight: 500;
+    margin-left: 5px;
+    list-style-position: inside;
+    li {
+      padding-left: 0px;
+      a {
+        font-size: 1.2rem;
+        color: rgb(105, 101, 101);
+        font-weight: 500;
+        margin-left: 0px;
+        padding-left: 0px;
+        text-decoration: none;
+        text-shadow: -0.3px -0.3px 0 rgb(53, 52, 52),
+          0.3px -0.3px 0 rgb(53, 52, 52), -0.3px 0.3px 0 rgb(53, 52, 52),
+          0.3px 0.3px 0 rgb(53, 52, 52);
+      }
+    }
+  }
+}
+
+.aab-main-index a:hover {
+  color: orangered;
+}
+
+.aab-main-index .aab-tips {
+  color: rgb(7, 7, 134);
+  margin: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: -0.3px -0.3px 0 rgb(53, 52, 52), 0.3px -0.3px 0 rgb(53, 52, 52),
+    -0.3px 0.3px 0 rgb(53, 52, 52), 0.3px 0.3px 0 rgb(53, 52, 52);
+}
+
+.a-tips {
+  color:orange !important;
+}
+
+.a-tips:hover{
+  color:rgb(7, 7, 134) !important;
+}

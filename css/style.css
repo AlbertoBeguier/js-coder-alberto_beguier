@@ -1,0 +1,262 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* BARRA DE NAVEGACION - IMAGEN CASA HOME y FOOTER */
+.aab-div-nav {
+  background-color: #fbd601;
+  border-bottom: black solid 2px;
+}
+
+.aab-img-titulo {
+  width: 18%;
+  margin: 3px;
+  padding: 3px;
+}
+
+.aab-home-img {
+  width: 3%;
+}
+
+.aab-header-a {
+  margin: 3px;
+  padding: 3px;
+}
+
+.aab-footer-img {
+  width: 3%;
+}
+
+footer a {
+  margin: 3px;
+  padding: 3px;
+}
+
+/* FIN BARRA DE NAVEGACION - IMAGEN CASA HOME y FOOTER */
+.aab-titulo-col1 {
+  margin-top: 1%;
+  margin-left: 2%;
+  background-color: rgb(245, 245, 173);
+  text-shadow: -0.3px -0.3px 0 orangered, 0.3px -0.3px 0 orangered, -0.3px 0.3px 0 orangered, 0.3px 0.3px 0 orangered;
+}
+
+.botonAbrirPDF {
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.aab-main-index {
+  margin-top: 5%;
+  padding: 10px;
+  background-color: rgb(245, 245, 173);
+}
+
+.aab-main-index p {
+  color: #f58232;
+  margin: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: -0.3px -0.3px 0 rgb(53, 52, 52), 0.3px -0.3px 0 rgb(53, 52, 52), -0.3px 0.3px 0 rgb(53, 52, 52), 0.3px 0.3px 0 rgb(53, 52, 52);
+}
+
+.aab-main-index ul {
+  font-size: 1.2rem;
+  color: rgb(48, 47, 47);
+  font-weight: 500;
+  margin-left: 5px;
+  list-style-position: inside;
+}
+.aab-main-index ul li {
+  padding-left: 0px;
+}
+.aab-main-index ul li a {
+  font-size: 1.2rem;
+  color: rgb(105, 101, 101);
+  font-weight: 500;
+  margin-left: 0px;
+  padding-left: 0px;
+  text-decoration: none;
+  text-shadow: -0.3px -0.3px 0 rgb(53, 52, 52), 0.3px -0.3px 0 rgb(53, 52, 52), -0.3px 0.3px 0 rgb(53, 52, 52), 0.3px 0.3px 0 rgb(53, 52, 52);
+}
+
+.aab-main-index a:hover {
+  color: orangered;
+}
+
+.aab-main-index .aab-tips {
+  color: rgb(7, 7, 134);
+  margin: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: -0.3px -0.3px 0 rgb(53, 52, 52), 0.3px -0.3px 0 rgb(53, 52, 52), -0.3px 0.3px 0 rgb(53, 52, 52), 0.3px 0.3px 0 rgb(53, 52, 52);
+}
+
+.a-tips {
+  color: orange !important;
+}
+
+.a-tips:hover {
+  color: rgb(7, 7, 134) !important;
+}
+
+.aab-main-paginas {
+  padding: 10px;
+}
+
+.titulo-pagina {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: solid 2px black;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #f58232;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.aab-parrafos-paginas {
+  color: black;
+  margin: 10px;
+  text-align: justify;
+  font-size: 1.1rem;
+  text-indent: 10px;
+}
+
+.aab-boton-codigo {
+  text-align: center;
+  font-size: 1rem;
+  margin: 3px;
+  padding: 3px;
+  font-weight: 400;
+}
+
+.classImgCod1 {
+  display: none;
+}
+
+.classImgCod2 {
+  display: none;
+}
+
+.texto-warning {
+  color: red;
+  font-weight: 500;
+}
+
+.texto-resaltado {
+  color: blue;
+  font-weight: 500;
+}
+
+.img-alinear-centro {
+  padding: 10px;
+  display: block; /* Asegura que la imagen sea un bloque en su contenedor */
+  margin: 0 auto;
+}
+
+.aab-main-practica {
+  padding: 10px;
+}
+
+.titulo-practica {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: solid 2px black;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #f58232;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.aab-parrafos-practica {
+  color: black;
+  margin: 10px;
+  text-align: justify;
+  font-size: 1.1rem;
+  text-indent: 10px;
+}
+
+#botonPrompt {
+  margin-left: 20px;
+  cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
+}
+
+#botonCodigo3 {
+  margin-left: 20px;
+  cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
+}
+
+.classImgCod3 {
+  display: none;
+}
+
+#botonCuil {
+  margin-left: 20px;
+  cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
+}
+
+#botonCodigoCuil {
+  margin-left: 20px;
+  cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
+}
+
+.classImgCodCuil {
+  display: none;
+}
+
+.aab-boton-practica-codigo {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1%;
+  padding: 0.5%;
+  font-weight: bold;
+}
+
+.classImgCod3 {
+  display: none;
+}
+
+.CodSueldoNeto {
+  display: none;
+}
+
+/*TABLA SUELDOS - QUE NO SE MEUSTRE HASTA SELECCIONAR UNA CATEGORIA*/
+/* Estilos para la tabla de sueldos */
+#tablaSueldos {
+  width: 50%; /* Ajustar esto según necesidades */
+  border-collapse: collapse; /* Opcional, para un estilo más limpio */
+  display: none; /* Para que no se muestre hasta que se seleccione una categoría */
+}
+
+#tablaSueldos th, #tablaSueldos td {
+  padding: 5px 10px; /* Espaciado dentro de las celdas */
+}
+
+#tablaSueldos th {
+  background-color: rgb(172, 172, 209); /* Color de fondo para los encabezados */
+  text-align: left; /* Alineación a la izquierda para los títulos de las columnas por defecto */
+}
+
+#tablaSueldos th:nth-child(2) {
+  text-align: center; /* Alineación al centro para el título de la segunda columna */
+}
+
+#tablaSueldos td:nth-child(2) {
+  text-align: right; /* Alineación a la derecha para la segunda columna de datos */
+}
+
+.sueldo-bruto {
+  font-weight: bold;
+}
+
+.sueldo-neto {
+  color: rgb(3, 3, 58);
+  font-weight: bold;
+}
+
+/*FIN TABLA SUELDOS - QUE NO SE MEUSTRE HASTA SELECCIONAR UNA CATEGORIA*/
+
+/*# sourceMappingURL=style.css.map */
