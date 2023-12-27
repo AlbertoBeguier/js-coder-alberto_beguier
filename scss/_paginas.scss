@@ -53,3 +53,18 @@
     display: block; /* Asegura que la imagen sea un bloque en su contenedor */
     margin: 0 auto; 
 }
+
+
+// ESTILOS PARA LA TABLA QUE MUESTRA EL ARCHIVO CSV
+
+.tablaCSV {
+    border-collapse: collapse; /* Asegura que los bordes de la tabla estén juntos */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 20px; /* Espacio encima de la tabla */
+}/* Estilos para las celdas de la tabla */ th, td {
+    border: 1px solid black; /* Bordes para las celdas */
+    padding: 8px; /* Espaciado interno en las celdas */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+// FIN ESTILOS PARA LA TABLA QUE MUESTRA EL ARCHIVO CSV

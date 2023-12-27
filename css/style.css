@@ -156,6 +156,17 @@ footer a {
   margin: 0 auto;
 }
 
+.tablaCSV {
+  border-collapse: collapse; /* Asegura que los bordes de la tabla estén juntos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-top: 20px; /* Espacio encima de la tabla */
+} /* Estilos para las celdas de la tabla */
+th, td {
+  border: 1px solid black; /* Bordes para las celdas */
+  padding: 8px; /* Espaciado interno en las celdas */
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
 .aab-main-practica {
   padding: 10px;
 }
@@ -258,5 +269,43 @@ footer a {
 }
 
 /*FIN TABLA SUELDOS - QUE NO SE MEUSTRE HASTA SELECCIONAR UNA CATEGORIA*/
+/* CALCULADORA */
+/* Estilo general de la calculadora */
+#calculadora {
+  border: 1px solid #000; /* Borde negro alrededor de la calculadora */
+  padding: 10px; /* Espacio entre el borde y los contenidos internos */
+  display: inline-block; /* Hace que la calculadora no ocupe toda la anchura disponible */
+}
+
+/* Estilo del display (pantalla) de la calculadora */
+#display {
+  width: 100%; /* El ancho del display ocupa el 100% de su contenedor */
+  margin-bottom: 10px; /* Espacio debajo del display */
+  text-align: right; /* Alinea el texto a la derecha */
+  height: 50px; /* Altura del display */
+  background-color: #8de9ec; /* Color de fondo celeste claro para el display */
+  border: 1px solid #000; /* Borde negro alrededor del display */
+  padding: 0 10px; /* Espacio interno dentro del display */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+  font-weight: bold; /* Hace que el texto sea más grueso */
+  font-size: 1.5em; /* Aumenta el tamaño del texto */
+}
+
+/* Estilo de las filas de botones */
+.fila {
+  display: flex; /* Usa flexbox para una disposición flexible de los botones */
+  justify-content: center; /* Centra los botones horizontalmente */
+}
+
+/* Estilo individual de los botones */
+#calculadora button {
+  font-weight: 600;
+  width: 45px; /* Ancho de cada botón */
+  height: 45px; /* Altura de cada botón */
+  margin: 5px; /* Margen alrededor de cada botón */
+  flex-grow: 1; /* Permite que los botones crezcan para ocupar el espacio disponible */
+}
+
+/* FIN CALCULADORA */
 
 /*# sourceMappingURL=style.css.map */
