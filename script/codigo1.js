@@ -36,4 +36,14 @@ function abrirPDF() {
   // Abre una nueva pestaña en el navegador y carga el archivo PDF 'ApuntesJS.pdf'
   window.open("files/ApuntesJS.pdf", "_blank");
 }
+function abrirPDF1() {
+  // Abre una nueva pestaña en el navegador y carga el archivo PDF 'ApuntesJS.pdf'
+  window.open("files/js-notesByMajoLedesma.pdf", "_blank");
+}
+function abrirPDF2() {
+  // Abre una nueva pestaña en el navegador y carga el archivo PDF 'ApuntesJS.pdf'
+  window.open("files/Clean_JavaScript_Aprende_a_Aplicar_Codigo_Limpio_SOLID_y_Testing.pdf", "_blank");
+}
+
+
 // Fin de la sección de función para abrir un archivo PDF
