@@ -31,18 +31,39 @@
         <!-- FIN ICONO HOME-->
       </div>
     </header>
-
+    <br />
     <main class="aab-main-paginas">
-      <p class="aab-parrafos-videos">Instalaciones Necesarias</p>
-      <button class="aab-boton-video" id="playButton">Reproducir Video</button>
+      <div class="video-container">
+        <p class="aab-parrafos-videos">Instalaciones Necesarias</p>
+        <button class="aab-boton-video" data-video-target="myVideo">
+          Play Video
+        </button>
+      </div>
       <video
         id="myVideo"
-        width="420"
-        height="340"
+        width="520"
+        height="440"
         controls
         style="display: none"
       >
         <source src="../files/instalaciones.mp4" type="video/mp4" />
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+
+      <div class="video-container">
+        <p class="aab-parrafos-videos">Hola Mundo</p>
+        <button class="aab-boton-video" data-video-target="myVideo1">
+          Play Video
+        </button>
+      </div>
+      <video
+        id="myVideo1"
+        width="520"
+        height="440"
+        controls
+        style="display: none"
+      >
+        <source src="../files/hola_mundo.mp4" type="video/mp4" />
         Tu navegador no soporta la etiqueta de video.
       </video>
 
@@ -66,13 +87,19 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("playButton")
-          .addEventListener("click", function () {
-            let video = document.getElementById("myVideo");
-            video.style.display = "block"; // Muestra el video
-            video.play(); // Inicia la reproducción
+        // Selecciona todos los botones con la clase 'aab-boton-video'
+        document.querySelectorAll(".aab-boton-video").forEach(button => {
+          button.addEventListener("click", function () {
+            // Obtiene el valor del atributo 'data-video-target'
+            let videoId = this.getAttribute("data-video-target");
+            let video = document.getElementById(videoId);
+
+            if (video) {
+              video.style.display = "block"; // Muestra el video
+              video.play(); // Inicia la reproducción
+            }
           });
+        });
       });
     </script>
   </body>
