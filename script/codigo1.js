@@ -27,8 +27,6 @@ function mostrarCodigo1() {
 }
 // Fin de la sección para mostrar imágenes al presionar un botón
 
-
-
 // Sección de función para abrir un archivo PDF
 
 // Función para abrir un archivo PDF
@@ -42,8 +40,10 @@ function abrirPDF1() {
 }
 function abrirPDF2() {
   // Abre una nueva pestaña en el navegador y carga el archivo PDF 'ApuntesJS.pdf'
-  window.open("files/Clean_JavaScript_Aprende_a_Aplicar_Codigo_Limpio_SOLID_y_Testing.pdf", "_blank");
+  window.open(
+    "files/Clean_JavaScript_Aprende_a_Aplicar_Codigo_Limpio_SOLID_y_Testing.pdf",
+    "_blank"
+  );
 }
-
 
 // Fin de la sección de función para abrir un archivo PDF

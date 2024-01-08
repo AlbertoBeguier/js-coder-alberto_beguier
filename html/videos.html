@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript2</title>
+    <link rel="icon" href="../img/iconoJS32x32.svg" />
+    <!-- BS STYLE-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- AAB STYLE-->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- AAB CODIGO JS-->
+    <script defer src="../script/codigo1.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="pagUp">
+        <!-- ICONO HOME-->
+        <a href="../index.html" class="fixed-top text-end aab-header-a">
+          <img
+            class="aab-home-img"
+            src="../img/home_sinFSlowN.gif"
+            alt="home"
+          />
+        </a>
+        <!-- FIN ICONO HOME-->
+      </div>
+    </header>
+
+    <main class="aab-main-paginas">
+      <p class="aab-parrafos-videos">Instalaciones Necesarias</p>
+      <button class="aab-boton-video" id="playButton">Reproducir Video</button>
+      <video
+        id="myVideo"
+        width="420"
+        height="340"
+        controls
+        style="display: none"
+      >
+        <source src="../files/instalaciones.mp4" type="video/mp4" />
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+
+      <br /><br /><br />
+    </main>
+
+    <footer>
+      <!-- ICONO UP-->
+      <a href="#pag2Sting" class="fixed-bottom text-end">
+        <img class="aab-footer-img" src="../img/subir_sinFSlowN.gif" alt="up" />
+      </a>
+      <!-- FIN ICONO UP-->
+    </footer>
+    <!-- BS JAVASCRIPT-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- FIN BS JAVASCRIPT-->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("playButton")
+          .addEventListener("click", function () {
+            let video = document.getElementById("myVideo");
+            video.style.display = "block"; // Muestra el video
+            video.play(); // Inicia la reproducción
+          });
+      });
+    </script>
+  </body>
+</html>
