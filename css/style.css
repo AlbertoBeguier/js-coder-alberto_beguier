@@ -307,10 +307,21 @@ th, td {
 }
 
 /* FIN CALCULADORA */
+.titulos-videos {
+  color: rgb(6, 6, 43);
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
 .video-container {
   display: flex;
   align-items: center;
   align-content: center;
+}
+
+.aab-parrafos-videos {
+  margin-left: 30px;
 }
 
 .aab-parrafos-videos,
@@ -337,6 +348,10 @@ th, td {
 .aab-boton-video:hover {
   color: white;
   background-color: black;
+}
+
+.div-enlace-video {
+  width: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */
