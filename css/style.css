@@ -242,7 +242,8 @@ th, td {
   display: none; /* Para que no se muestre hasta que se seleccione una categoría */
 }
 
-#tablaSueldos th, #tablaSueldos td {
+#tablaSueldos th,
+#tablaSueldos td {
   padding: 5px 10px; /* Espaciado dentro de las celdas */
 }
 
@@ -307,6 +308,10 @@ th, td {
 }
 
 /* FIN CALCULADORA */
+.temporizador {
+  width: 40px;
+}
+
 .titulos-videos {
   color: rgb(6, 6, 43);
   font-size: 2rem;

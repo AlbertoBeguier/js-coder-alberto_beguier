@@ -129,10 +129,15 @@
         <input type="date" id="fecha2" name="fecha2">
         <!-- Botón que, al hacer clic, activará la función de cálculo de diferencia de fechas -->
         <img id ="calcular" width="5%" src="../img/raton_sinFSlowAzul.gif" alt="mouse" ><span>Ejecutar Script</span>
-        <img  id ="botonCodigoFechas" width="6%" src="../img/html_sinFSlowAzul.gif" alt="codigo" ><span>Mostrar Código</span>
         <!-- Espacio para mostrar el resultado. Inicialmente está vacío. -->
         <p id="resultadoAnMesDias"></p>
         <p id="resultado"></p>
+        <img class="mostrar-pdf" data-pdf-url="../files/dos_fechas_cod.pdf" data-container-id="pdf-container-1" 
+        width="6%" src="../img/html_sinFSlowAzul.gif" alt="Mostrar Código">
+        <span>Mostrar Código</span>
+        <div id="pdf-container-1" class="pdf-container"></div>
+   
+        
 
         <h5 id="sueldosBrutosCCT" class="titulo-practica">CARGAR Y LEER ARCHIVO CSV</h5>
         <!-- Etiqueta para el campo de carga de archivos -->
@@ -144,62 +149,70 @@
 
 
         <h5 id="calculadoraid" class="titulo-practica">CALCULADORA</h5>
-         
-     <!-- Estructura principal de la Calculadora -->
-     <div id="calculadora">
-      <!-- Display donde se muestra la entrada y el resultado -->
-      <input type="text" id="display" disabled>
 
-      <!-- Botones de la calculadora -->
-      <!-- Primera fila: números 7, 8, 9 y operador de división -->
-      <div class="fila">
-          <button onclick="presionarNumero('7')">7</button>
-          <button onclick="presionarNumero('8')">8</button>
-          <button onclick="presionarNumero('9')">9</button>
-          <button onclick="presionarOperador('/')">/</button>
-      </div>
+        <!-- Estructura principal de la Calculadora -->
+        <div id="calculadora">
+            <!-- Display donde se muestra la entrada y el resultado -->
+            <input type="text" id="display" disabled>
+    
+            <!-- Primera fila: números 7, 8, 9 y operador de división -->
+            <div class="fila">
+                <button onclick="presionarNumero('7')">7</button>
+                <button onclick="presionarNumero('8')">8</button>
+                <button onclick="presionarNumero('9')">9</button>
+                <button onclick="presionarOperador('/')">/</button>
+            </div>
+    
+            <!-- Segunda fila: números 4, 5, 6 y operador de multiplicación -->
+            <div class="fila">
+                <button onclick="presionarNumero('4')">4</button>
+                <button onclick="presionarNumero('5')">5</button>
+                <button onclick="presionarNumero('6')">6</button>
+                <button onclick="presionarOperador('*')">*</button>
+            </div>
+    
+            <!-- Tercera fila: números 1, 2, 3 y operador de resta -->
+            <div class="fila">
+                <button onclick="presionarNumero('1')">1</button>
+                <button onclick="presionarNumero('2')">2</button>
+                <button onclick="presionarNumero('3')">3</button>
+                <button onclick="presionarOperador('-')">-</button>
+            </div>
+    
+            <!-- Cuarta fila: número 0, punto decimal, operador de suma y botón de igual -->
+            <div class="fila">
+                <button onclick="presionarNumero('0')">0</button>
+                <button onclick="presionarNumero('.')">.</button>
+                <button onclick="presionarOperador('+')">+</button>
+                <button onclick="calcular()">=</button>
+            </div>
+    
+            <!-- Quinta fila: botones para paréntesis, borrar y limpiar -->
+            <div class="fila">
+                <button onclick="presionarOperador('(')">(</button>
+                <button onclick="presionarOperador(')')">)</button>
+                <button onclick="borrar()">←</button>
+                <button onclick="limpiar()">C</button>
+            </div>
+        </div>
+        <img class="mostrar-pdf" data-pdf-url="../files/codigo_calculadora.pdf" data-container-id="pdf-container-2" 
+        width="6%" src="../img/html_sinFSlowAzul.gif" alt="Mostrar Código">
+        <span>Mostrar Código</span>
+        <div id="pdf-container-2" class="pdf-container"></div>
+       
 
-      <!-- Segunda fila: números 4, 5, 6 y operador de multiplicación -->
-      <div class="fila">
-          <button onclick="presionarNumero('4')">4</button>
-          <button onclick="presionarNumero('5')">5</button>
-          <button onclick="presionarNumero('6')">6</button>
-          <button onclick="presionarOperador('*')">*</button>
-      </div>
-
-      <!-- Tercera fila: números 1, 2, 3 y operador de resta -->
-      <div class="fila">
-          <button onclick="presionarNumero('1')">1</button>
-          <button onclick="presionarNumero('2')">2</button>
-          <button onclick="presionarNumero('3')">3</button>
-          <button onclick="presionarOperador('-')">-</button>
-      </div>
-
-      <!-- Cuarta fila: número 0, punto decimal, operador de suma, igual  -->
-<div class="fila">
-  <button onclick="presionarNumero('0')">0</button>
-  <button onclick="presionarNumero('.')">.</button>
-  <button onclick="presionarOperador('+')">+</button>
-  <button onclick="calcular()">=</button>
+  <<h5 id="setTimeOut" class="titulo-practica">TEMPORIZADOR</h5>
+  <p class="aab-parrafos-practica">Función <span class="texto-resaltado">setTimeOut():</span> Esta función ejecutará un código cuando transcurra cierto tiempo.</p>
+  <p class="aab-parrafos-practica"><b>Recibe dos parámetros,</b> el primero es la <b>función que tiene la acción que se va a ejecutar cuando el tiempo se agote</b> y el segundo es la <b>cantidad de tiempo que el temporizador debe esperar para ejecutar la acción</b> contenida en la función.</p>
+  <p class="aab-parrafos-practica"><u>El tiempo se expresa en <b>milisegundos</b> <span class="texto-resaltado">1000 milisegundos = a 1 segundo</u></span>. Podemos poner 10000 para <b>10 segundos</b> o, por ejemplo, <b>1000*10</b> para expresar la misma unidad de tiempo.</p>
   
-</div>
-
-      <!-- Quinta fila: botón de borrar (retroceso) y limpiar -->
-      <div class="fila">
-          <button onclick="borrar()">←</button>
-          <button onclick="limpiar()">C</button>
-      </div>
-  </div>
-
-
-  <h5 id="setTimeOut" class="titulo-practica">TEMPORIZADOR</h5>
-  <p class="aab-parrafos-practica">Función <span class="texto-resaltado">setTimeOut(): </span>Esta función ejecutará un código cuando transcurra cierto tiempo.</p>
-  <p class="aab-parrafos-practica"><b>Recibe dos parámetros,</b> el primero es la <b>función que tiene la acción que se va a ejecutar cuando el tiempo se agote </b> y el segundo es la <b>cantidad de tiempo que el temporizador debe esperar para ejecutar la acción </b>contenida en la función. </p>
-  <p class="aab-parrafos-practica"><u>El tiempo se expresa en <b>milisegundos</b> <span class="texto-resaltado"> 1000 milisegundos = a 1 segundo</u></span>. Podemos poner 10000 para <b>10 segundos</b> o, por ejemplo, <b>1000*10 </b>para expresar la misma unidad de tiempo. </p>
-  <label for="tiempoElegido">Seleccione cantidad de segundos del temporizador: </label>
-  <input type="number" name="tiempoElegido" id="idTiempoElegido">
-  <img id ="botonsetTime" width="5%" src="../img/raton_sinFSlowAzul.gif" alt="mouse" ><span>Ejecutar Script</span>
-  <img  id ="botonCodigoSetTIme" width="6%" src="../img/html_sinFSlowAzul.gif" alt="codigo" ><span>Mostrar Código</span>
+  <!-- Asegúrarse  de que el valor de 'for' en <label> coincida con el 'id' del <input> -->
+  <label for="idTiempoElegido">Seleccione cantidad de segundos del temporizador: </label>
+  <input class="temporizador" type="number" name="tiempoElegido" id="idTiempoElegido">
+  
+  <img id="botonsetTime" width="5%" src="../img/raton_sinFSlowAzul.gif" alt="mouse"><span>Ejecutar Script</span>
+  <img id="botonCodigoSetTIme" width="6%" src="../img/html_sinFSlowAzul.gif" alt="codigo"><span>Mostrar Código</span>
+  
 
 
 

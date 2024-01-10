@@ -1,148 +1,152 @@
 .aab-main-practica {
-    padding: 10px;
-  }
-
-.titulo-practica{
-    color:white;
-    font-size: 1.6rem;
-    font-weight: bold;
-    border: solid 2px black;
-    padding-bottom: 5px;
-    text-align: center;
-    background-color: $color2;
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  padding: 10px;
 }
 
-.aab-parrafos-practica{
-    color:black;
-    margin:10px;
-    text-align: justify;
-    font-size: 1.1rem;
-    text-indent: 10px;
- }
+.titulo-practica {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: solid 2px black;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: $color2;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.aab-parrafos-practica {
+  color: black;
+  margin: 10px;
+  text-align: justify;
+  font-size: 1.1rem;
+  text-indent: 10px;
+}
 
 #botonPrompt {
-    margin-left:20px;
-    cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
+  margin-left: 20px;
+  cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
 }
 
 #botonCodigo3 {
-    margin-left:20px;
-    cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
+  margin-left: 20px;
+  cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
 }
 
 .classImgCod3 {
-    display: none;
+  display: none;
 }
 
-
 #botonCuil {
-    margin-left:20px;
-    cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
+  margin-left: 20px;
+  cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
 }
 
 #botonCodigoCuil {
-    margin-left:20px;
-    cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
+  margin-left: 20px;
+  cursor: pointer; /* Cambia a 'pointer' cuando el ratón pasa sobre el icono */
 }
 
 .classImgCodCuil {
-    display: none;
+  display: none;
 }
 
-
-.aab-boton-practica-codigo{
-    text-align: center;
-    font-size: 1rem;
-    margin:1%;
-    padding:0.5%;
-    font-weight:bold;
+.aab-boton-practica-codigo {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1%;
+  padding: 0.5%;
+  font-weight: bold;
 }
 
 .classImgCod3 {
-    display: none;
+  display: none;
 }
 
-
 .CodSueldoNeto {
-    display: none;
+  display: none;
 }
 
 /*TABLA SUELDOS - QUE NO SE MEUSTRE HASTA SELECCIONAR UNA CATEGORIA*/
 /* Estilos para la tabla de sueldos */
 #tablaSueldos {
-    width: 50%; /* Ajustar esto según necesidades */
-    border-collapse: collapse; /* Opcional, para un estilo más limpio */
-    display: none; /* Para que no se muestre hasta que se seleccione una categoría */
+  width: 50%; /* Ajustar esto según necesidades */
+  border-collapse: collapse; /* Opcional, para un estilo más limpio */
+  display: none; /* Para que no se muestre hasta que se seleccione una categoría */
 }
 
-#tablaSueldos th, #tablaSueldos td {
-    padding: 5px 10px; /* Espaciado dentro de las celdas */
+#tablaSueldos th,
+#tablaSueldos td {
+  padding: 5px 10px; /* Espaciado dentro de las celdas */
 }
 
 #tablaSueldos th {
-    background-color: rgb(172, 172, 209); /* Color de fondo para los encabezados */
-    text-align: left; /* Alineación a la izquierda para los títulos de las columnas por defecto */
+  background-color: rgb(
+    172,
+    172,
+    209
+  ); /* Color de fondo para los encabezados */
+  text-align: left; /* Alineación a la izquierda para los títulos de las columnas por defecto */
 }
 
 #tablaSueldos th:nth-child(2) {
-    text-align: center; /* Alineación al centro para el título de la segunda columna */
+  text-align: center; /* Alineación al centro para el título de la segunda columna */
 }
 
 #tablaSueldos td:nth-child(2) {
-    text-align: right; /* Alineación a la derecha para la segunda columna de datos */
+  text-align: right; /* Alineación a la derecha para la segunda columna de datos */
 }
 
 .sueldo-bruto {
-    font-weight: bold; 
+  font-weight: bold;
 }
 
 .sueldo-neto {
-    color: rgb(3, 3, 58);
-    font-weight: bold; 
+  color: rgb(3, 3, 58);
+  font-weight: bold;
 }
 
 /*FIN TABLA SUELDOS - QUE NO SE MEUSTRE HASTA SELECCIONAR UNA CATEGORIA*/
-
-
 
 /* CALCULADORA */
 
 /* Estilo general de la calculadora */
 #calculadora {
-    border: 1px solid #000; /* Borde negro alrededor de la calculadora */
-    padding: 10px; /* Espacio entre el borde y los contenidos internos */
-    display: inline-block; /* Hace que la calculadora no ocupe toda la anchura disponible */
+  border: 1px solid #000; /* Borde negro alrededor de la calculadora */
+  padding: 10px; /* Espacio entre el borde y los contenidos internos */
+  display: inline-block; /* Hace que la calculadora no ocupe toda la anchura disponible */
 }
 
 /* Estilo del display (pantalla) de la calculadora */
 #display {
-    width: 100%; /* El ancho del display ocupa el 100% de su contenedor */
-    margin-bottom: 10px; /* Espacio debajo del display */
-    text-align: right; /* Alinea el texto a la derecha */
-    height: 50px; /* Altura del display */
-    background-color: #8de9ec; /* Color de fondo celeste claro para el display */
-    border: 1px solid #000; /* Borde negro alrededor del display */
-    padding: 0 10px; /* Espacio interno dentro del display */
-    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
-    font-weight: bold; /* Hace que el texto sea más grueso */
-    font-size: 1.5em; /* Aumenta el tamaño del texto */
+  width: 100%; /* El ancho del display ocupa el 100% de su contenedor */
+  margin-bottom: 10px; /* Espacio debajo del display */
+  text-align: right; /* Alinea el texto a la derecha */
+  height: 50px; /* Altura del display */
+  background-color: #8de9ec; /* Color de fondo celeste claro para el display */
+  border: 1px solid #000; /* Borde negro alrededor del display */
+  padding: 0 10px; /* Espacio interno dentro del display */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+  font-weight: bold; /* Hace que el texto sea más grueso */
+  font-size: 1.5em; /* Aumenta el tamaño del texto */
 }
 
 /* Estilo de las filas de botones */
 .fila {
-    display: flex; /* Usa flexbox para una disposición flexible de los botones */
-    justify-content: center; /* Centra los botones horizontalmente */
+  display: flex; /* Usa flexbox para una disposición flexible de los botones */
+  justify-content: center; /* Centra los botones horizontalmente */
 }
 
 /* Estilo individual de los botones */
 #calculadora button {
-    font-weight: 600;
-    width: 45px; /* Ancho de cada botón */
-    height: 45px; /* Altura de cada botón */
-    margin: 5px; /* Margen alrededor de cada botón */
-    flex-grow: 1; /* Permite que los botones crezcan para ocupar el espacio disponible */
+  font-weight: 600;
+  width: 45px; /* Ancho de cada botón */
+  height: 45px; /* Altura de cada botón */
+  margin: 5px; /* Margen alrededor de cada botón */
+  flex-grow: 1; /* Permite que los botones crezcan para ocupar el espacio disponible */
 }
 
-
 /* FIN CALCULADORA */
+
+.temporizador {
+  width: 40px;
+}
