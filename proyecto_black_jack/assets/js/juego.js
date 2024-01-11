@@ -1,74 +1,76 @@
-/**
- * 2C = Two of Clubs
- * 2D = Two of Diamonds
- * 2H = Two of Hearts
- * 2S = Two of Spades
- */
-
+// Inicialización del deck (mazo de cartas) como arreglo vacío
 let deck = [];
+
+// Tipos de cartas (corresponden a los palos: Clubs, Diamonds, Hearts, Spades)
 const tipos = ["C", "D", "H", "S"];
+
+// Cartas especiales (As, Jota, Reina, Rey)
 const especiales = ["A", "J", "Q", "K"];
 
+// Puntos del jugador y de la computadora inicializados en 0
 let puntosJugador = 0;
 let puntosComputadora = 0;
 
-// Referencias del HTML
+// Referencias a elementos del HTML para los botones
 const btnPedir = document.querySelector("#btnPedir");
 const btnDetener = document.querySelector("#btnDetener");
 const btnNuevo = document.querySelector("#btnNuevo");
 
+// Referencias a elementos del HTML para las cartas
 const divCartasJugador = document.querySelector("#jugador-cartas");
 const divCartasComputadora = document.querySelector("#computadora-cartas");
 
+// Referencias a elementos del HTML para mostrar los puntos
 const puntosHTML = document.querySelectorAll("small");
 
-// Esta función crea un nuevo deck
+// Función para crear un nuevo deck
 const crearDeck = () => {
+  // Crear cartas numéricas del 2 al 10 para cada tipo de palo
   for (let i = 2; i <= 10; i++) {
     for (let tipo of tipos) {
       deck.push(i + tipo);
     }
   }
 
+  // Crear cartas especiales para cada tipo de palo
   for (let tipo of tipos) {
     for (let esp of especiales) {
       deck.push(esp + tipo);
     }
   }
-  // console.log( deck ) solo para probar código
+
+  // Barajar el deck
   deck = _.shuffle(deck);
-  console.log(deck);
   return deck;
 };
 
+// Llamar a crearDeck para inicializar el juego
 crearDeck();
 
-// Esta función me permite tomar una carta
+// Función para pedir una nueva carta
 const pedirCarta = () => {
   if (deck.length === 0) {
     throw "No hay cartas en el deck";
   }
-  const carta = deck.pop();
-  return carta;
+  return deck.pop();
 };
 
-// pedirCarta();
+// Función para determinar el valor de una carta
 const valorCarta = carta => {
   const valor = carta.substring(0, carta.length - 1);
   return isNaN(valor) ? (valor === "A" ? 11 : 10) : valor * 1;
 };
 
-// turno de la computadora
+// Turno de la computadora
 const turnoComputadora = puntosMinimos => {
   do {
     const carta = pedirCarta();
-
-    puntosComputadora = puntosComputadora + valorCarta(carta);
+    puntosComputadora += valorCarta(carta);
     puntosHTML[1].innerText = puntosComputadora;
 
-    // <img class="carta" src="assets/cartas/2C.png">
+    // Crear imagen de la carta y añadirla al HTML
     const imgCarta = document.createElement("img");
-    imgCarta.src = `assets/cartas/${carta}.png`; //3H, JD
+    imgCarta.src = `assets/cartas/${carta}.png`; // Ejemplo: 3H, JD
     imgCarta.classList.add("carta");
     divCartasComputadora.append(imgCarta);
 
@@ -77,6 +79,7 @@ const turnoComputadora = puntosMinimos => {
     }
   } while (puntosComputadora < puntosMinimos && puntosMinimos <= 21);
 
+  // Evaluar el resultado después de un breve retraso
   setTimeout(() => {
     if (puntosComputadora === puntosMinimos) {
       alert("Nadie gana :(");
@@ -90,17 +93,19 @@ const turnoComputadora = puntosMinimos => {
   }, 100);
 };
 
-// Eventos
+// Eventos para los botones
 btnPedir.addEventListener("click", () => {
   const carta = pedirCarta();
-
-  puntosJugador = puntosJugador + valorCarta(carta);
+  puntosJugador += valorCarta(carta);
   puntosHTML[0].innerText = puntosJugador;
+
+  // Crear imagen de la carta y añadirla al HTML
   const imgCarta = document.createElement("img");
-  imgCarta.src = `assets/cartas/${carta}.png`; //3H, JD
+  imgCarta.src = `assets/cartas/${carta}.png`; // Ejemplo: 3H, JD
   imgCarta.classList.add("carta");
   divCartasJugador.append(imgCarta);
 
+  // Condiciones para finalizar el juego
   if (puntosJugador > 21) {
     console.warn("Lo siento mucho, perdiste");
     btnPedir.disabled = true;
@@ -117,24 +122,20 @@ btnPedir.addEventListener("click", () => {
 btnDetener.addEventListener("click", () => {
   btnPedir.disabled = true;
   btnDetener.disabled = true;
-
   turnoComputadora(puntosJugador);
 });
 
 btnNuevo.addEventListener("click", () => {
+  // Reiniciar el juego
   console.clear();
   deck = [];
-  deck = crearDeck();
-
+  crearDeck();
   puntosJugador = 0;
   puntosComputadora = 0;
-
   puntosHTML[0].innerText = 0;
   puntosHTML[1].innerText = 0;
-
   divCartasComputadora.innerHTML = "";
   divCartasJugador.innerHTML = "";
-
   btnPedir.disabled = false;
   btnDetener.disabled = false;
 });
