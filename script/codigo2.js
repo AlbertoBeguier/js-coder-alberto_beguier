@@ -57,8 +57,8 @@ document.querySelectorAll(".mostrar-pdf").forEach(function (img) {
     let container = document.getElementById(containerId);
     let iframe = document.createElement("iframe");
     iframe.setAttribute("src", pdfUrl);
-    iframe.style.width = "60%";
-    iframe.style.height = "800px"; // Ajusta según tus necesidades
+    iframe.style.width = "80%";
+    iframe.style.height = "500px"; // Ajusta según tus necesidades
     container.innerHTML = ""; // Limpiar el contenedor
     container.appendChild(iframe);
   });

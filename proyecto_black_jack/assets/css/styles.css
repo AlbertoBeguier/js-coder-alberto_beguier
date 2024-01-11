@@ -1,0 +1,41 @@
+html,
+body {
+  margin: 0px;
+
+  color: white;
+}
+
+.titulo {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.carta {
+  position: relative;
+  width: 150px;
+  left: 100px;
+  margin-left: -75px;
+}
+
+#computadora-cartas,
+#jugador-cartas {
+  height: 240px;
+}
+
+.contenedor-juego {
+  width: 50%; /* Ocupa la mitad de la pantalla */
+  margin: auto; /* Centra el contenedor en la pantalla */
+  padding-left: 20px; /* Añade algo de espacio alrededor del contenido */
+  padding-right: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para resaltar el contenedor */
+  background-color: #2f4f30;
+}
+
+@media (max-width: 768px) {
+  .contenedor-juego {
+    width: 80%; /* Ocupa más espacio en pantallas más pequeñas */
+  }
+}
