@@ -7,8 +7,8 @@
     -0.3px 0.3px 0 orangered, 0.3px 0.3px 0 orangered;
 }
 
-.botonAbrirPDF{
-  margin-left:5%;
+.botonAbrirPDF {
+  margin-left: 5%;
   cursor: pointer;
 }
 
@@ -51,8 +51,13 @@
   }
 }
 
+.aab-main-index ul li:hover {
+  margin-left: 10px;
+  color: orangered;
+}
 .aab-main-index a:hover {
   color: orangered;
+  margin-left: -6px;
 }
 
 .aab-main-index .aab-tips {
@@ -65,9 +70,9 @@
 }
 
 .a-tips {
-  color:orange !important;
+  color: orange !important;
 }
 
-.a-tips:hover{
-  color:rgb(7, 7, 134) !important;
+.a-tips:hover {
+  color: rgb(7, 7, 134) !important;
 }

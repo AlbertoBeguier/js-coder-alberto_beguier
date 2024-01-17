@@ -81,8 +81,14 @@ footer a {
   text-shadow: -0.3px -0.3px 0 rgb(53, 52, 52), 0.3px -0.3px 0 rgb(53, 52, 52), -0.3px 0.3px 0 rgb(53, 52, 52), 0.3px 0.3px 0 rgb(53, 52, 52);
 }
 
+.aab-main-index ul li:hover {
+  margin-left: 10px;
+  color: orangered;
+}
+
 .aab-main-index a:hover {
   color: orangered;
+  margin-left: -6px;
 }
 
 .aab-main-index .aab-tips {
