@@ -1,70 +1,154 @@
-
 // Para que la barra no tape el main
 .aab-main-paginas {
-    padding: 10px;
-  }
-
-.titulo-pagina{
-    color:white;
-    font-size: 1.6rem;
-    font-weight: bold;
-    border: solid 2px black;
-    padding-bottom: 5px;
-    text-align: center;
-    background-color: $color2;
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  padding: 10px;
 }
 
-.aab-parrafos-paginas{
-    color:black;
-    margin:10px;
-    text-align: justify;
-    font-size: 1.1rem;
-    text-indent: 10px;
- }
+.titulo-pagina {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: solid 2px black;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: $color2;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
 
-.aab-boton-codigo{
-    text-align: center;
-    font-size: 1rem;
-    margin:3px;
-    padding:3px;
-    font-weight:400;
+.aab-parrafos-paginas {
+  color: black;
+  margin: 10px;
+  text-align: justify;
+  font-size: 1.1rem;
+  text-indent: 10px;
+}
+
+.aab-boton-codigo {
+  text-align: center;
+  font-size: 1rem;
+  margin: 3px;
+  padding: 3px;
+  font-weight: 400;
 }
 
 .classImgCod1 {
-    display: none;
+  display: none;
 }
 .classImgCod2 {
-    display: none;
+  display: none;
 }
 
-.texto-warning{
-    color:red;
-    font-weight: 500;
+.texto-warning {
+  color: red;
+  font-weight: 500;
 }
 
-.texto-resaltado{
-    color:blue;
-    font-weight: 500;
+.texto-resaltado {
+  color: blue;
+  font-weight: 500;
 }
 
-.img-alinear-centro{
-    padding:10px;
-    display: block; /* Asegura que la imagen sea un bloque en su contenedor */
-    margin: 0 auto; 
+.img-alinear-centro {
+  padding: 10px;
+  display: block; /* Asegura que la imagen sea un bloque en su contenedor */
+  margin: 0 auto;
 }
-
 
 // ESTILOS PARA LA TABLA QUE MUESTRA EL ARCHIVO CSV
 
 .tablaCSV {
-    border-collapse: collapse; /* Asegura que los bordes de la tabla estén juntos */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin-top: 20px; /* Espacio encima de la tabla */
-}/* Estilos para las celdas de la tabla */ th, td {
-    border: 1px solid black; /* Bordes para las celdas */
-    padding: 8px; /* Espaciado interno en las celdas */
-    text-align: left; /* Alineación del texto a la izquierda */
+  border-collapse: collapse; /* Asegura que los bordes de la tabla estén juntos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-top: 20px; /* Espacio encima de la tabla */
+} /* Estilos para las celdas de la tabla */
+th,
+td {
+  border: 1px solid black; /* Bordes para las celdas */
+  padding: 8px; /* Espaciado interno en las celdas */
+  text-align: center; /* Alineación del texto a la derecha*/
 }
 
 // FIN ESTILOS PARA LA TABLA QUE MUESTRA EL ARCHIVO CSV
+
+//CALCULO DE INTERESES
+
+.cuerpo-principal {
+  background-color: #080819; /* Blue */
+  color: #ffffff; /* White text */
+}
+
+/* Header and footer icons */
+.encabezado-int img,
+.footer-int {
+  filter: invert(100%);
+  width: 3%;
+  margin: 3px;
+  padding: 3px;
+}
+
+/* Sobrescribe los estilos de Bootstrap para el botón 'Calcular' */
+#calculadora #calcular {
+  background-color: #ffffff !important; /* Fondo blanco */
+  color: #000000 !important; /* Texto negro */
+  padding: 10px 20px !important; /* Aumenta el relleno */
+  border: 1px solid #000000 !important; /* Borde negro */
+  font-size: 16px !important; /* Tamaño de fuente */
+  width: auto !important; /* Ajusta el ancho según sea necesario */
+  min-width: 100px; /* Ancho mínimo */
+  display: block !important; /* Usa el nivel de bloque para el ancho completo */
+  margin: 10px auto !important; /* Margen automático para centrar */
+}
+
+/* Estilo para el estado 'hover' del botón 'Calcular' */
+#calculadora #calcular:hover {
+  background-color: #777778 !important; /* Fondo gris al pasar el ratón por encima */
+  color: #ffffff !important; /* Texto blanco al pasar el ratón por encima */
+}
+
+/* Asegura que el contenedor #calculadora use Flexbox para centrar los elementos internos */
+#calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para los campos de entrada y el botón, para asegurar un espacio uniforme entre ellos */
+#calculadora input,
+#calculadora button {
+  margin-bottom: 10px;
+}
+
+.main-interes {
+  display: flex; /* Usa Flexbox */
+  flex-direction: column; /* Los elementos se organizan verticalmente */
+  align-items: center; /* Alinea los elementos horizontalmente en el centro */
+  justify-content: center; /* Alinea los elementos verticalmente en el centro */
+  min-height: 100vh; /* Altura mínima para ocupar toda la ventana visible */
+  text-align: center; /* Centra el texto de todos los elementos internos */
+}
+
+/* Estilos adicionales para asegurar que la tabla y otros elementos se vean bien al centrar */
+.table-interes {
+  width: 100%; /* O ajusta según tu preferencia */
+  max-width: 600px; /* O la anchura máxima que prefieras */
+  margin: auto; /* Para centrar la tabla */
+}
+
+/* Estilo para los encabezados de la tabla */
+.interes-th {
+  text-align: center; /* Centra el texto en los encabezados */
+  border: 1px solid white; /* Borde blanco para los encabezados */
+  color: white; /* Texto blanco para los encabezados */
+}
+
+/* Estilo para las celdas de la tabla */
+.table-interes td {
+  border: 1px solid white; /* Borde blanco para las celdas y la tabla */
+  text-align: right;
+}
+
+/* Estilo para la tabla */
+.table-interes {
+  width: 100%; /* Ajusta al 100% del contenedor */
+  border-collapse: collapse; /* Elimina el espacio entre los bordes */
+}

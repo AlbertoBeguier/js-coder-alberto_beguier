@@ -298,95 +298,112 @@ function calcularDiferencia() {
   ).innerHTML = `La diferencia es de ${diasTotales} ${textoDias}.`;
 }
 
-// CARGAR UN ARCHIVO CSV LEERLO Y DEVOLVERLO COMO UN OBJETO
-// CUYAS KEYS SON LOS TILULOS DE LAS COLUMNAS Y LOS VALORES TODAS LAS RESTANTES FILAS DE ESA COLUMNA
+// ARCHIVO CSV -- CARGA LEE Y ALMACENA EN LOCAL STORAGE
 
-// Espera a que todo el contenido del DOM esté cargado antes de ejecutar el script.
+// Evento que se dispara cuando el contenido del DOM está completamente cargado.
+// Evento que se dispara cuando el contenido del DOM está completamente cargado.
 document.addEventListener("DOMContentLoaded", function () {
-  // Agrega un manejador de evento 'change' al input de tipo 'file'.
   document
     .getElementById("input-file")
     .addEventListener("change", handleFileSelect, false);
+  cargarDatosDesdeLocalStorage(); // Intenta cargar datos desde localStorage cuando la página se carga.
 });
 
-// Función que se ejecuta cuando el usuario selecciona un archivo.
 function handleFileSelect(event) {
-  const file = event.target.files[0]; // Obtiene el archivo seleccionado por el usuario.
+  // Asegúrate de que hay un archivo seleccionado.
+  if (event.target.files.length === 0) {
+    console.log("No se seleccionó ningún archivo.");
+    return; // Salir de la función si no hay archivos seleccionados.
+  }
+
+  const file = event.target.files[0]; // Obtiene el primer archivo seleccionado.
   const reader = new FileReader(); // Crea una nueva instancia de FileReader.
 
-  // Evento que se dispara cuando el contenido del archivo ha sido leído.
   reader.onload = function (event) {
-    const text = event.target.result; // Obtiene el contenido del archivo como texto.
-    const data = parseCSVToObject(text); // Parsea el texto CSV a un objeto.
-    displayTable(data); // Muestra los datos en una tabla.
-    console.log(data); // verificar objeto con keys = titulos de la columna y valores = array de las restantes filas de las columnas
+    const text = event.target.result;
+    const data = parseCSVToObject(text);
+    displayTable(data);
+    console.log(data);
+    localStorage.setItem("csvData", JSON.stringify(data));
   };
 
-  reader.readAsText(file); // Lee el contenido del archivo como texto.
+  reader.readAsText(file, "UTF-8"); // Asegúrate de que 'file' es un archivo válido.
 }
 
-// Función para parsear el texto del archivo CSV a un objeto.
+// Convierte el texto CSV a un objeto JavaScript.
 function parseCSVToObject(text) {
   const lines = text.split("\n"); // Divide el texto en líneas.
-  const headers = lines[0].split(";").filter(cell => cell.trim() !== ""); // Extrae los títulos de las columnas.
-  const dataObject = {}; // Objeto para almacenar los datos.
+  const headers = lines[0].split(";").filter(cell => cell.trim() !== ""); // Extrae los encabezados.
+  const dataObject = {}; // Inicializa el objeto para almacenar los datos.
 
   headers.forEach(header => {
-    dataObject[header] = []; // Inicializa un array para cada columna.
+    dataObject[header] = []; // Crea un array para cada encabezado.
   });
 
-  // Itera sobre las líneas restantes para llenar el objeto.
+  // Itera sobre las líneas del CSV.
   lines.slice(1).forEach(line => {
-    if (line.trim() === "") return; // Ignora líneas vacías.
-    const values = line.split(";").map(cell => cell.trim());
+    const values = line.split(";").map(cell => cell.trim()); // Limpia las celdas.
 
-    // Verifica que la línea tenga el número correcto de celdas y que todas las celdas tengan datos.
-    if (
-      values.length === headers.length &&
-      !values.some(value => value === "")
-    ) {
+    // Verifica si hay valores suficientes en la línea.
+    if (values.length === headers.length) {
       headers.forEach((header, index) => {
-        dataObject[header].push(values[index]); // Añade el valor a la columna correspondiente.
+        let parsedValue = values[index]; // Aquí estaba el error, debe ser 'values[index]', no 'value'.
+
+        // Aplica formato de moneda a la última columna 'Sbasico'.
+        if (index === headers.length - 1) {
+          parsedValue = parseFloat(values[index]).toLocaleString("es-AR", {
+            style: "currency",
+            currency: "ARS",
+          });
+        }
+        dataObject[header].push(parsedValue); // Agrega el valor al objeto.
       });
     }
   });
 
-  return dataObject; // Retorna el objeto con los datos.
+  return dataObject; // Devuelve el objeto con los datos.
 }
 
-// Función para mostrar los datos del objeto en forma de tabla.
+// Muestra los datos del objeto en una tabla HTML.
 function displayTable(dataObject) {
-  const container = document.getElementById("table-container"); // Encuentra el contenedor.
-  const table = document.createElement("table"); // Crea un elemento <table>.
-  table.setAttribute("border", "1");
+  const container = document.getElementById("table-container"); // Contenedor de la tabla.
+  const table = document.createElement("table"); // Crea una tabla.
+  table.setAttribute("border", "1"); // Establece un borde.
 
-  // Añade la fila de encabezados.
+  // Crea la fila de encabezados.
   const headerRow = document.createElement("tr");
   Object.keys(dataObject).forEach(header => {
     const headerCell = document.createElement("th");
-    headerCell.textContent = header; // Establece el contenido del encabezado.
+    headerCell.textContent = header; // Texto del encabezado.
     headerRow.appendChild(headerCell);
   });
   table.appendChild(headerRow);
 
-  // Determina el número de filas en base a la longitud de los arrays.
+  // Determina el número de filas.
   const numRows = Object.values(dataObject)[0].length;
 
-  // Añade las filas de datos.
+  // Añade filas de datos.
   for (let i = 0; i < numRows; i++) {
     const row = document.createElement("tr");
-    let addRow = true; // Flag para determinar si la fila debe ser añadida.
     Object.keys(dataObject).forEach(key => {
       const cell = document.createElement("td");
-      cell.textContent = dataObject[key][i] || ""; // Añade el dato o un string vacío si no hay dato.
-      if (dataObject[key][i] === "") addRow = false; // Si algún valor está vacío, no añadir la fila.
+      cell.textContent = dataObject[key][i] || ""; // Añade datos o un string vacío.
       row.appendChild(cell);
     });
-    if (addRow) table.appendChild(row); // Añade la fila solo si todos los valores están presentes.
+    table.appendChild(row);
   }
 
-  container.innerHTML = ""; // Limpia cualquier contenido previo.
-  container.appendChild(table); // Añade la tabla al contenedor.
+  container.innerHTML = ""; // Limpia el contenedor.
+  container.appendChild(table); // Añade la tabla.
+}
+
+// Carga los datos desde localStorage.
+function cargarDatosDesdeLocalStorage() {
+  const datosGuardados = localStorage.getItem("csvData");
+  if (datosGuardados) {
+    const dataObject = JSON.parse(datosGuardados); // Parsea los datos guardados.
+    displayTable(dataObject); // Muestra los datos.
+  }
 }
 
 // CALCULADORA

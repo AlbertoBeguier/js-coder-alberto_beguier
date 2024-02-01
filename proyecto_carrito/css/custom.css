@@ -1,14 +1,21 @@
 html {
   font-size: 62.5%;
 }
+body,
+html {
+  min-height: 100vh;
+  position: relative;
+}
+
 .titulo-principal {
-  text-align: center;
-  background-color: orange;
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 body {
   background-color: #f5f3f3;
 }
+
 h1 {
   text-align: center;
 }
@@ -19,11 +26,11 @@ h4 {
   font-size: 16px;
   font-weight: 700;
 }
-header {
-  padding: 20px 0 0 0;
+header li {
+  padding: 10px 0 0 0;
   background: white;
   text-align: center;
-  margin-top: 30px;
+  margin-right: 75px;
 }
 @media (min-width: 750px) {
   header {
@@ -31,12 +38,14 @@ header {
   }
 }
 .borrar-curso {
-  background-color: red;
-  border-radius: 0%;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.borrar-curso .bi-trash3-fill {
+  color: red; /* Cambia el color según tus necesidades */
+  font-size: 14px; /* Ajusta el tamaño si es necesario */
 }
 
 ul {
@@ -44,18 +53,43 @@ ul {
 }
 #hero {
   background-image: url(../img/hero.jpg);
-  height: 350px;
+  height: 270px;
   background-size: cover;
 }
 #encabezado {
-  margin: 30px 0;
+  padding: 20px;
 }
 .submenu {
-  position: relative;
+  display: flex; /* Habilita Flexbox */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  justify-content: flex-end; /* Alinea los elementos hacia la derecha */
+}
+#img-carrito {
+  margin-right: 5px; /* Ajusta según necesidad */
+}
+.contador-carrito {
+  background-color: rgb(121, 117, 117);
+  border-radius: 50%; /* Mantiene el elemento completamente redondo */
+  display: inline-block; /* Asegura que el contador se mantenga en línea */
+  padding: 4px 4px; /* Ajusta el relleno para asegurar que el número se ajuste dentro del círculo */
+  font-size: 1.2rem; /* Ajusta el tamaño de fuente según sea necesario */
+  color: white;
+  margin-left: 4px; /* Ajusta para alinear correctamente con el ícono del carrito */
+  position: relative; /* Permite un ajuste fino de la posición */
+  top: -1px; /* Ajusta según sea necesario */
+  right: 0; /* Ajusta según sea necesario */
 }
 
 .submenu #carrito {
   display: none;
+  position: absolute;
+  right: 0;
+  top: 110%; /* Ajusta este valor según sea necesario */
+  z-index: 100;
+  background-color: white;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
 }
 .submenu:hover #carrito {
   display: block;
@@ -69,6 +103,7 @@ ul {
   min-height: 400px;
   min-width: 300px;
 }
+
 .vacio {
   padding: 10px;
   background-color: crimson;
@@ -79,14 +114,17 @@ ul {
 .contenido-hero {
   margin-top: 80px;
   color: white;
+  font-size: 18px;
 }
 .contenido-hero form {
   position: relative;
   margin-bottom: 0;
+  font-size: 18px;
 }
 .contenido-hero form #buscador {
   height: 50px;
   margin-bottom: 0;
+  font-size: 18px;
 }
 .contenido-hero form .submit-buscador {
   position: absolute;
@@ -101,6 +139,7 @@ ul {
   background-position: right center;
   background-repeat: no-repeat;
   border: none;
+  font-size: 18px;
 }
 
 .barra {
@@ -127,6 +166,7 @@ ul {
 .barra p {
   margin: 0;
   color: white;
+  font-size: 16px;
 }
 .icono {
   background-repeat: no-repeat;
@@ -177,7 +217,7 @@ ul {
   margin-bottom: 5px;
 }
 .info-card .precio {
-  text-decoration: line-through;
+  text-decoration: none;
   font-size: 18px;
   margin-top: 10px;
 }
@@ -187,12 +227,64 @@ ul {
 }
 
 .footer {
-  margin-top: 40px;
-  border-top: 1px solid #aaa;
-  padding-top: 40px;
+  background: #741d51; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 );
+  clear: both;
+  position: relative;
+  height: auto;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
 }
-.footer .menu a {
-  display: block;
-  margin-bottom: 10px;
-  text-decoration: none;
+
+.contador-carrito {
+  background-color: rgb(121, 117, 117);
+  text-align: center;
+  border-radius: 50%; /* Hace el elemento completamente redondo */
+  font-size: 1.5rem;
+  padding: 2px 2px; /* Ajusta esto según sea necesario para centrar el texto */
+  font-weight: 600;
+  color: white;
+  display: inline-block; /* Esto ayuda a mantener la forma del círculo */
+  width: 20px; /* Establece un ancho fijo */
+  height: 20px; /* Establece una altura igual al ancho para formar un círculo */
+  line-height: 17px; /* Alinea verticalmente el texto en el círculo */
+}
+#boton-comprar {
+  color: white;
+  background-color: rgb(15, 15, 48);
+}
+
+#boton-comprar:hover {
+  color: #0f0f30;
+  font-weight: 700;
+  background-color: white;
+}
+
+#vaciar-carrito {
+  color: white;
+  background-color: rgb(134, 22, 22);
+}
+
+#vaciar-carrito:hover {
+  color: rgb(134, 22, 22);
+  font-weight: 700;
+  background-color: white;
 }
