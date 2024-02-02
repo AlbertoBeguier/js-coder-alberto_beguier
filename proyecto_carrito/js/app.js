@@ -396,7 +396,7 @@ function procesarCompra(e) {
       iconColor: "black",
       color: "black",
     }).then(() => {
-      // Lógica adicional para procesar la compra puede ir aquí
+      // Lógica adicional para procesar la compra puede ir aquí .......
 
       // Vaciar el carrito después de la compra
       vaciarCarrito();
