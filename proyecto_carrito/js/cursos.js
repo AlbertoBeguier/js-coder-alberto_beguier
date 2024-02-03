@@ -1,3 +1,5 @@
+// Array de cursos
+
 const cursosArray = [
   {
     id: "1",
