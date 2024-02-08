@@ -410,6 +410,35 @@ td {
   width: 40px;
 }
 
+#btnActualizar {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+}
+
+#btnActualizar:hover {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  color: white;
+  background-color: #000;
+}
+
+#mensajeActualizacion {
+  color: rgb(8, 8, 39);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#datosDolar {
+  margin: 10px;
+  padding: 10px;
+}
+
 .titulos-videos {
   color: rgb(6, 6, 43);
   font-size: 2rem;

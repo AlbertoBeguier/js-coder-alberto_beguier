@@ -26,9 +26,32 @@ h4 {
   font-size: 16px;
   font-weight: 700;
 }
+
+.header {
+  text-align: center;
+  color: white;
+  background: #741d51; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-top: 1px solid black; /* Línea superior negra */
+  border-bottom: 1px solid black; /* Línea inferior negra */
+}
 header li {
   padding: 10px 0 0 0;
-  background: white;
+
   text-align: center;
   margin-right: 75px;
 }
@@ -57,7 +80,32 @@ ul {
   background-size: cover;
 }
 #encabezado {
+  background: #741d51; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #741d51 0%,
+    #e44e52 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 );
+  clear: both;
+  position: relative;
+  height: auto;
+  color: white;
+  text-align: center;
   padding: 20px;
+  font-size: 26px;
+  border-top: 1px solid black; /* Línea superior negra */
+  border-bottom: 1px solid black; /* Línea inferior negra */
 }
 .submenu {
   display: flex; /* Habilita Flexbox */
@@ -160,6 +208,8 @@ ul {
     #741d51 0%,
     #e44e52 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-top: 1px solid black; /* Línea superior negra */
+  border-bottom: 1px solid black; /* Línea inferior negra */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
 }
 
@@ -243,6 +293,8 @@ ul {
     #741d51 0%,
     #e44e52 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-top: 1px solid black; /* Línea superior negra */
+  border-bottom: 1px solid black; /* Línea inferior negra */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 );
   clear: both;
   position: relative;
